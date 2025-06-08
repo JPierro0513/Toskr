@@ -27,6 +27,10 @@ extern "C" {
 
 #define WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WPA_WPA2_PSK
 
+#ifdef CONFIG_CONNECT_WIFI
+#define CONFIG_WIFI_NEED_THIS_FILE
+#endif
+
 /**
  * @brief Configure Wi-Fi or Ethernet, connect, wait for IP
  *

@@ -1,3 +1,3 @@
 idf_component_register(SRCS "wifi.c" "connection.c"
                        INCLUDE_DIRS "include"
-                      REQUIRES mqtt)
+                      REQUIRES mqtt esp_wifi esp_common)

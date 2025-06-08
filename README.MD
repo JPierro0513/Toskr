@@ -1,4 +1,4 @@
-Requires settings
+Requires setting:
 
 ```
 CompileFlags:

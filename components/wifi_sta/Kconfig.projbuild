@@ -10,7 +10,7 @@ menu "My MQTT Configuration"
             Protocol examples can use Wi-Fi, Ethernet and/or Thread to connect to the network.
             Choose this option to connect with WiFi
 
-    if CONFFIG_CONNECT_WIFI
+    if CONFIG_CONNECT_WIFI
         config WIFI_SSID_PWD_FROM_STDIN
             bool "Get ssid and password from stdin"
             default n

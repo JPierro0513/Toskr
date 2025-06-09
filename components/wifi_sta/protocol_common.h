@@ -4,6 +4,8 @@
 #include "esp_err.h"
 #include "esp_netif.h"
 
+#define CONFIG_CONNECT_WIFI 1
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -11,6 +13,7 @@ extern "C" {
 #if !CONFIG_IDF_TARGET_LINUX
 #if CONFIG_CONNECT_WIFI
 #define NETIF_DESC_STA "the_netif_sta"
+#define CONFIG_WIFI_NEED_THIS_FILE 1
 #endif
 
 #if CONFIG_WIFI_SCAN_METHOD_FAST
@@ -26,10 +29,6 @@ extern "C" {
 #endif
 
 #define WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WPA_WPA2_PSK
-
-#ifdef CONFIG_CONNECT_WIFI
-#define CONFIG_WIFI_NEED_THIS_FILE
-#endif
 
 /**
  * @brief Configure Wi-Fi or Ethernet, connect, wait for IP

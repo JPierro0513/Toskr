@@ -7,6 +7,7 @@
 #include "esp_event.h"
 #include "esp_netif.h"
 #include "protocol_common.h"
+#include "mqtt_part.h"
 
 static const char *TAG = "[main]";
 
@@ -25,5 +26,5 @@ void app_main(void)
 
     wifi_connect();
 
-    //start()
+    mqtt_app_start();
 }
